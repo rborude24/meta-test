@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { ServiceService } from 'src/app/service.service';
 
 export interface DialogData {
+  id:number,
   title:string,
   content:string
 }
@@ -21,20 +22,13 @@ export class DashboardComponent implements OnInit {
     console.log(this.cardData);
   }
 
-  editCard(content,title){
+  editCard(content,title,id){
 
     const dialogRef = this.dialog.open(Dialog, {
       width: '300px',
       height: '250px',
-      data: { title:title,content:content }
+      data: { title:title,content:content,id:id }
     });
-    // this.service.data.map((item)=>{
-    //   if(item.title = title){
-    //     item.cards.map((item)=>{
-    //       if(item.content)
-    //     })
-    //   }
-    // })
   }
 
   openDialogue(val){
@@ -71,13 +65,28 @@ export class Dialog {
   }
 
   save(){
+    if(this.data.id){
+      this.service.data.map((item)=>{
+        if(item.title == this.data.title){
+          item.cards.map((each)=>{
+            if(each.id == this.data.id){
+              each.content = this.content;
+            }
+          })
+        }
+      })
+    }
+    else{
     this.service.data.map((item)=>{
       if(item.title == this.data.title){
 
-          item.cards.push({content:this.content});
+          item.cards.push({id:item.cards.length+1,content:this.content});
       }
-    })
+    });
+    }
+    console.log( this.service.data)
     this.dialogRef.close();
+
   }
 
 

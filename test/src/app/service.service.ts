@@ -12,12 +12,15 @@ export class ServiceService {
        title:'What went well',
        cards:[
          {
+        id:1,
          content:'First'
          },
          {
+          id:2,
           content:'Second'
          },
          {
+          id:3,
           content:'Third'
          },
 
@@ -27,12 +30,15 @@ export class ServiceService {
       title:'What can be improved',
       cards:[
         {
+          id:1,
         content:'fourth'
         },
         {
+          id:2,
          content:'fifth'
         },
         {
+          id:3,
          content:'sixth'
         },
 
@@ -42,12 +48,15 @@ export class ServiceService {
       title:'Start doing',
       cards:[
         {
+          id:1,
         content:'seventh'
         },
         {
+          id:2,
          content:'eigth'
         },
         {
+          id:3,
          content:'nineth'
         },
 
@@ -57,12 +66,15 @@ export class ServiceService {
       title:'Action items',
       cards:[
         {
+          id:1,
         content:'tenth'
         },
         {
+          id:2,
          content:'eleventh'
         },
         {
+          id:3,
          content:'twelveth'
         },
 
