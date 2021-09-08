@@ -27,13 +27,13 @@ export class ServiceService {
       title:'What can be improved',
       cards:[
         {
-        content:'First'
+        content:'fourth'
         },
         {
-         content:'Second'
+         content:'fifth'
         },
         {
-         content:'Third'
+         content:'sixth'
         },
 
      ]
@@ -42,13 +42,13 @@ export class ServiceService {
       title:'Start doing',
       cards:[
         {
-        content:'First'
+        content:'seventh'
         },
         {
-         content:'Second'
+         content:'eigth'
         },
         {
-         content:'Third'
+         content:'nineth'
         },
 
      ]
@@ -57,13 +57,13 @@ export class ServiceService {
       title:'Action items',
       cards:[
         {
-        content:'First'
+        content:'tenth'
         },
         {
-         content:'Second'
+         content:'eleventh'
         },
         {
-         content:'Third'
+         content:'twelveth'
         },
 
      ]
